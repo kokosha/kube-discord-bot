@@ -1,0 +1,13 @@
+[Unit]
+Description=Kube Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/kube-discord-bot/
+ExecStart=/root/kube-discord-bot/build/kube-discord-bot
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
